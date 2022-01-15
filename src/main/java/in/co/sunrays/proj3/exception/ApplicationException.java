@@ -1,0 +1,24 @@
+package in.co.sunrays.proj3.exception;
+
+/**
+ * ApplicationException is propogated from Service classes when an business
+ * logic exception occurered.
+ *
+ * @author SUNRAYS Technologies
+ * @version 1.0
+ * @Copyright (c) SUNRAYS Technologies
+ *
+ */
+public class ApplicationException extends Exception {
+
+	public ApplicationException() {
+		super();
+	}
+
+	/**
+	 * @param msg : Error message
+	 */
+	public ApplicationException(String msg) {
+		super(msg);
+	}
+}

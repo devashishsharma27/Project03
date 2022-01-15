@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2020-02-01T14:24:24 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8621df9-3228-4ebf-965d-3bdc6f19c5ca">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (8)"/>
+	<queryString>
+		<![CDATA[SELECT `ID`,`ROLLNO`, `NAME`, `PHYSICS`, `CHEMISTRY`, `MATHS` , PHYSICS + CHEMISTRY + MATHS as total from ST_MARKSHEET where physics>=35 and chemistry>=35 and maths>=35  order by total desc limit 0,10]]>
+	</queryString>
+	<field name="ID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ROLLNO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PHYSICS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CHEMISTRY" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MATHS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Long"/>
+	<group name="ID">
+		<groupExpression><![CDATA[$F{ID}]]></groupExpression>
+	</group>
+	<group name="ROLLNO">
+		<groupExpression><![CDATA[$F{ROLLNO}]]></groupExpression>
+	</group>
+	<group name="NAME">
+		<groupExpression><![CDATA[$F{NAME}]]></groupExpression>
+	</group>
+	<group name="PHYSICS">
+		<groupExpression><![CDATA[$F{PHYSICS}]]></groupExpression>
+	</group>
+	<group name="CHEMISTRY">
+		<groupExpression><![CDATA[$F{CHEMISTRY}]]></groupExpression>
+	</group>
+	<group name="MATHS">
+		<groupExpression><![CDATA[$F{MATHS}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band height="802" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<image>
+				<reportElement x="-180" y="0" width="2250" height="801" uuid="275484a1-5dd3-4b1e-bacc-d2892057586b"/>
+				<imageExpression><![CDATA["G:/SpringToolSuite/ORSProject_3/src/main/webapp/img/m4.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image>
+				<reportElement x="190" y="10" width="180" height="70" uuid="da3db76f-467d-44d4-98bc-854b62f035f9"/>
+				<imageExpression><![CDATA["C:/Users/Lenovo/Desktop/img12334/custom.png.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="5" width="550" height="36" forecolor="#D4AF37" uuid="fcd7336a-8996-4c34-8aab-c4ce643fa81d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Calligraphy" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Marksheet Merit List Of SunRays Technology]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="13" width="610" height="35" uuid="776e324a-0af3-4300-86b4-f0805c0f0435"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.No        Name        RollNo        Physics        Chemistry        Maths        Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="100" height="30" forecolor="#CC6600" uuid="42c34645-91d5-4bd7-84c7-fd05911693c7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="90" height="30" forecolor="#CC6600" uuid="a0e21978-a461-4195-a5c7-50b981f5cdaf"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ROLLNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="80" height="30" forecolor="#CC6600" uuid="b5f5eaa3-e72e-4219-acf2-a9c545e984ab"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PHYSICS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="30" forecolor="#CC6600" uuid="8f58fb6f-6c78-4adf-9bee-d9ef7be15107"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CHEMISTRY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="100" height="30" forecolor="#CC6600" uuid="55921c33-6bc8-412f-add9-0fd16e86eeae"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MATHS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="0" width="100" height="30" forecolor="#CC6600" uuid="7865ea1d-d6bd-479a-b177-0dc47ea42b1f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-10" y="0" width="30" height="20" forecolor="#CC6600" uuid="0bd13604-40ed-4850-8710-a259b759a5a6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="142" y="10" width="270" height="30" uuid="adf705f6-3d06-47ae-9e38-31b07b55c41e"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ ©Sunrays Technology 2020]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="432" y="19" width="38" height="21" uuid="509e73a0-0493-4b8f-8175-5e1d02ac26b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Page]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="19" width="20" height="21" uuid="9f106575-4e4e-4332-9b9e-0a3b8f2a55de"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="54" splitType="Stretch"/>
+	</summary>
+</jasperReport>

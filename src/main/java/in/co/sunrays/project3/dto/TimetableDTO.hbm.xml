@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Jan, 2020 4:11:40 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.sunrays.project3.dto.TimetableDTO" extends="in.co.sunrays.project3.dto.BaseDTO" discriminator-value="TimetableDTO" lazy="false">
+        <property name="id" type="java.lang.Long">
+            <column name="ID" />
+        </property>
+        <property name="courseName" type="java.lang.String">
+            <column name="COURSENAME" />
+        </property>
+        <property name="examDate" type="java.util.Date">
+            <column name="EXAMDATE" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="semester" type="java.lang.String">
+            <column name="SEMESTER" />
+        </property>
+        <property name="examTime" type="java.lang.String">
+            <column name="EXAMTIME" />
+        </property>
+        <property name="courseId" type="long">
+            <column name="COURSEID" />
+        </property>
+        <property name="subjectId" type="long">
+            <column name="SUBJECTID" />
+        </property>
+        <property name="subjectName" type="java.lang.String">
+            <column name="SUBJECTNAME" />
+        </property>
+    </subclass>
+</hibernate-mapping>
